@@ -5,8 +5,8 @@
 <p class="lead"><%= @user.name %></p>
 
 <% if current_user %>
-    <% if current_user != @user && !current_user.folowing?(@user) %>
-        <%= link_to "Follow", follow_user_path(@user), class: "btn btn-default" %>
+    <% if current_user != @user && !current_user.following?(@user) %>
+        <%= link_to "Follow", follow_user_path(@user), method: :post, class: "btn btn-default" %>
     <% end %>
 <% end %>
 
