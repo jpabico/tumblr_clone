@@ -15,7 +15,7 @@ class UserFlowTest < ActionDispatch::IntegrationTest
     password: "password"
     assert_equal "/", path
 
-    get_via_redirect "/logout"
+    delete_via_redirect "/logout"
     assert_equal "/login", path 
   end
 end
