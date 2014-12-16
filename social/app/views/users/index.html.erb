@@ -1,5 +1,7 @@
+<h1>List of All Users</h1>
+<p><%= link_to "Home", root_path, class: "btn btn-default" %></p>
+<div class="list-group">
 <% @users.each do |f| %>
-<ul>
-    <li><a href = '/users/<%= f.id%>'><%= f.name %></a></li>
-</ul>
+    <a href = '/users/<%= f.id%>' class="list-group-item"><%= f.name %> <span class="badge"> <%= f.followers.count %> followers</span></a>
 <% end %>
+</div>
